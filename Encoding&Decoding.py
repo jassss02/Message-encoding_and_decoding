@@ -36,12 +36,14 @@ def Decode(key,message):
         dec.append(chr((256+ord(message[i])-ord(key_c))%256))
     return ''.join(dec)
 
+#Example-
 x1=Decode('1234','wpnCl8KfwqDCoA==')
 print(x1)
 
 y1=Decode('xyz', 'w4vDnsOdw63Dq8OfwpjDssOpw63Dq8Kaw6HDp8Ogw6c=')
 print(y1)
 
+#GUI for the Message encoder and decoder
 def Mode():
     if(mode.get()=='e'):
         Result.set(Encode(private_key.get(),Text.get()))
